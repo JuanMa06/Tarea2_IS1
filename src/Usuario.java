@@ -21,6 +21,20 @@ public class Usuario {
 	
 	
 	
+	@Override
+	public boolean equals(Object obj) {
+		// Si se compara con el mismo es true
+		if (this == obj) return true;
+		
+		// Si se compara con un objeto de otra clase es false
+		if (!(obj instanceof Usuario)) return false;
+	
+		// Lo casteo a usuario
+		Usuario usu = (Usuario) obj;
+		
+		// Comparo por la cedula
+		return this.cedula.equals(usu.getCedula());
+	}
 	
 	
 	
